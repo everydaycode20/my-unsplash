@@ -1,0 +1,59 @@
+.delete-box{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .container-delete-box{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 250px;
+        width: 82vw;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 15px;
+        z-index: 10;
+
+        .action-btn{
+            align-self: flex-end;
+            display: flex;
+            column-gap: 5px;
+
+            .notDelete-btn{
+                border: none;
+                background-color: #3DB46D;
+                cursor: pointer;
+                border-radius: 12px;
+                height: 40px;
+                width: 80px;
+                font-size: 0.75rem;
+                color: #fff;
+                font-weight: 700;
+
+            }
+
+            .delete-btn{
+                background-color: #ff7171;
+                color: #fff;
+                border-radius: 12px;
+                border: none;
+                font-size: 0.75rem;
+                font-weight: 700;
+                height: 40px;
+                width: 80px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .background{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.212);
+    }
+}

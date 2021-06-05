@@ -1,0 +1,125 @@
+.main-container-page{
+    color: white;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    // row-gap: 40px;
+    height: 100vh;
+    width: 100vw;
+
+    .main-section{
+
+        .box-title{
+            background-color: #02475E;
+            width: 80vw;
+            height: 200px;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1{
+                font-weight: 500;
+                font-size: 2rem;
+                opacity: 0;
+                animation: opacity 0.7s ease-in forwards;
+            }
+    
+            h2{
+                font-weight: 400;
+                font-size: 1.2rem;
+                opacity: 0;
+                animation: opacity 0.9s ease-out 0.7s forwards;
+            }
+        }
+        
+        .btn-container{
+            display: flex;
+            flex-direction: row;
+            column-gap: 25px;
+            justify-content: center;
+            margin-top: 20px;
+            width: 80vw;
+    
+            a{
+                text-decoration: none;
+                font-weight: 700;
+                color: black;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    picture{
+        width: 80vw;
+        -webkit-box-shadow: 0px 0px 0px 10px #02475E; 
+        box-shadow: 0px 0px 0px 10px #02475E;   
+        opacity: 0;
+        animation: opacity 0.3s ease-in-out 1.4s forwards;
+        align-self: flex-start;
+
+        source{
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .main-container-page{
+    
+        .main-section{
+            .box-title{
+                width: 350px;
+            }
+            
+            .btn-container{
+                width: 350px;
+            }
+        }
+
+        picture{
+            width: 350px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container-page{
+        display: flex;
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 70px;
+        align-items: flex-start;
+
+        .main-section{
+            margin-top: 300px;
+
+            .box-title{
+                justify-content: space-evenly;
+            }
+        }
+
+        picture{
+            margin-top: 300px;
+        }
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

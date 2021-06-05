@@ -1,0 +1,112 @@
+[color=false]{
+    --color-span: black;
+    --font-weight: 500; 
+}
+
+[color=true]{
+    --color-span: #ff7171;
+    --font-weight: 500; 
+}
+
+.add-box{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 250px;
+        width: 82vw;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 15px;
+        z-index: 5;
+
+        h1{
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        label{
+            font-size: 0.8rem;
+        }
+
+        .char-left{
+            color: var(--color-span);
+            font-weight: var(--font-weight);
+        }
+
+        input{
+            border: none;
+            border-radius: 12px;
+            padding: 5px;
+            border: 1px solid black;
+            height: 40px;
+
+            &:focus{
+                border-radius: 12px;
+                outline: black solid 1px;
+            }
+        }
+
+        .action-btn{
+            align-self: flex-end;
+            display: flex;
+            column-gap: 5px;
+
+            .cancel-btn{
+                border: none;
+                background-color: #fff;
+                cursor: pointer;
+                border-radius: 12px;
+                height: 40px;
+                width: 80px;
+                font-size: 0.75rem;
+                color: #BDBDBD;
+                font-weight: 700;
+
+                &:hover{
+                    background-color: #ff7171;
+                    transition: all 0.5s;
+                    color: #fff;
+                }
+            }
+
+            .submit-btn{
+                background-color: #3DB46D;
+                color: #fff;
+                box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+                border: none;
+                font-size: 0.75rem;
+                font-weight: 700;
+                height: 40px;
+                width: 80px;
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    .background{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.212);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .add-box{
+        form{
+            width: 450px;
+        }
+    }
+}

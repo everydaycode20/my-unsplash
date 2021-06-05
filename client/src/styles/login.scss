@@ -1,0 +1,91 @@
+.container-login{
+    // width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+
+    form{
+        background-color: rgba(255, 255, 255, 0.664);
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 250px;
+        width: 82vw;
+        border-radius: 6px;
+        padding: 15px;
+
+        h1{
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        input{
+            border: none;
+            border-radius: 6px;
+            padding: 5px;
+            border: 1px solid black;
+            height: 30px;
+            font-size: 1rem;
+
+            &:focus{
+                border-radius: 12px;
+                outline: black solid 1px;
+            }
+        }
+
+        button{
+            background-color: #02475e;
+            color: #fff;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            height: 40px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .show{
+            display: flex;
+            flex-direction: row;
+            column-gap: 5px;
+        }
+
+        span a{
+            text-decoration: none;
+            font-weight: 700;
+            color: black;
+        }
+    }
+
+    .message{
+        background-color: #ff7171;
+        color: #fff;
+        margin-top: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+        width: max-content;
+        align-self: center;
+
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container-login{
+        form{
+            width: 450px;
+        }
+    }
+}
